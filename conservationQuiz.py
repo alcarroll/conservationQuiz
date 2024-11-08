@@ -36,10 +36,6 @@ def main(roundsToPlay, gameMode, correctAnswerCount, incorrectAnswerCount, total
         correct = correctAnswer[2]
         answerList = [incorrectAnswer1[2], incorrectAnswer2[2], incorrectAnswer3[2], correctAnswer[2]]
         random.shuffle(answerList)
-        print(f"1: " + answerList[0] +
-              "\n2: " + answerList[1] +
-              "\n3: " + answerList[2] +
-              "\n4: " + answerList[3])
 
     # Set, shuffle, and output answer list for common mode
     elif gameMode == "commonMode":
@@ -47,10 +43,6 @@ def main(roundsToPlay, gameMode, correctAnswerCount, incorrectAnswerCount, total
         correct = correctAnswer[1]
         answerList = [incorrectAnswer1[1], incorrectAnswer2[1], incorrectAnswer3[1], correctAnswer[1]]
         random.shuffle(answerList)
-        print(f"1: " + answerList[0] +
-              "\n2: " + answerList[1] +
-              "\n3: " + answerList[2] +
-              "\n4: " + answerList[3])
 
     # Set, shuffle, and output answer list for banding code mode
     elif gameMode == "bandingCodeMode":
@@ -58,10 +50,6 @@ def main(roundsToPlay, gameMode, correctAnswerCount, incorrectAnswerCount, total
         correct = correctAnswer[0]
         answerList = [incorrectAnswer1[0], incorrectAnswer2[0], incorrectAnswer3[0], correctAnswer[0]]
         random.shuffle(answerList)
-        print(f"1: " + answerList[0] +
-              "\n2: " + answerList[1] +
-              "\n3: " + answerList[2] +
-              "\n4: " + answerList[3])
 
     # Set, shuffle, and output answer list for banding species mode
     elif gameMode == "bandingSpeciesMode":
@@ -69,10 +57,12 @@ def main(roundsToPlay, gameMode, correctAnswerCount, incorrectAnswerCount, total
         correct = correctAnswer[1]
         answerList = [incorrectAnswer1[1], incorrectAnswer2[1], incorrectAnswer3[1], correctAnswer[1]]
         random.shuffle(answerList)
-        print(f"1: " + answerList[0] +
-              "\n2: " + answerList[1] +
-              "\n3: " + answerList[2] +
-              "\n4: " + answerList[3])
+
+    # Display answers and call checkAnswer
+    print(f"1: " + answerList[0] +
+          "\n2: " + answerList[1] +
+          "\n3: " + answerList[2] +
+          "\n4: " + answerList[3])
 
     checkAnswer(correct, gameMode, answerList, correctAnswerCount, incorrectAnswerCount, totalAnswerCount)
 
